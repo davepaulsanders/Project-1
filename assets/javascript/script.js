@@ -1,4 +1,5 @@
 const form = document.querySelector(".travel-form");
+const modalContainer = document.querySelector(".modal");
 const modal = document.querySelector(".modal-content");
 const cityInput = document.querySelector(".city-text");
 const startDate = document.querySelector(".start-date");
@@ -46,7 +47,7 @@ function getCoords(city, start, end) {
         throw Error("Not a city!");
       } else {
         response.json().then((data) => {
-          modal.classList.remove("is-active");
+          modalContainer.classList.remove("is-active");
           console.log(data.name, data.coord.lat, data.coord.lon);
           // functions to call here
         });
@@ -90,6 +91,7 @@ function handleSubmit() {
       startError.textContent = "Start date must be after end date!";
       endDate.classList.add("is-danger");
       endError.textContent = "End date must be before start date!";
+      return;
     }
     // convert start and end objects to strings
     start = dateToString(start);
