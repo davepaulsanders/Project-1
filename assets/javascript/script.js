@@ -104,7 +104,6 @@ function handleSubmit() {
 
 // submit listener for form
 form.addEventListener("submit", (event) => {
-
   event.preventDefault();
   handleSubmit();
 });
