@@ -1,0 +1,74 @@
+body {
+  background-color: #0C0032;
+}
+
+/* Modal Styling Start -- These are mostly to override Bulma */
+
+.modal-content {
+  border-radius: 15px;
+  padding: 2rem!important;
+}
+input {
+  border-radius: 10px!important;
+}
+button {
+  border-radius: 10px!important;
+}
+
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Modal Styling End */
+
+.City {
+  
+  background-color: #282828;
+  color:whitesmoke;
+  text-align: center;
+   }
+
+.Events {
+   color:whitesmoke;
+   background-color:#282828;
+   text-align: center;
+   }
+
+.Breweries { 
+  background-color: #282828;
+  color:whitesmoke;
+  text-align: center; }
+
+  img {
+    width:100px;
+    height:100px;
+  }
+
+  button {
+    background-color: #3500d3;
+    border: none;
+    color: whitesmoke;
+    border-radius: 4px;
+  }
+
+
+
+  
