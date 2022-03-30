@@ -1,25 +1,14 @@
 body {
   background-color: #0C0032;
 }
-.container {
-  display: grid; 
-  grid-template-columns: 2fr 0.1fr 2fr; 
-  grid-template-rows: 1.4fr 0.6fr 1fr; 
-  gap: 4px 1px; 
-  grid-template-areas: 
-    "City City City"
-    "Events . Breweries"
-    "Events . Breweries"; 
-}
 .City {
-  grid-area: City;
+  
   background-color: #282828;
   color:whitesmoke;
   text-align: center;
    }
 
 .Events {
-   grid-area: Events;
    color:whitesmoke;
    background-color:#282828;
    text-align: center;
@@ -28,7 +17,6 @@ body {
 .Breweries { 
   background-color: #282828;
   color:whitesmoke;
-  grid-area: Breweries;
   text-align: center; }
 
   img {
