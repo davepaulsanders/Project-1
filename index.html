@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.1/luxon.min.js" integrity="sha512-Nw0Abk+Ywwk5FzYTxtB70/xJRiCI0S2ORbXI3VBlFpKJ44LM6cW2WxIIolyKEOxOuMI90GIfXdlZRJepu7cczA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>City Explorer</title>
 </head>
 <body>
     <div class="container is-justify-content-center">
+
+        <!-- MODAL START-->
+
+        <div class="modal is-active">  <!-- REMOVE IS ACTIVE CLASS TO WORK ON SITE -->
+            <div class="modal-background"></div>
+            <div class="modal-content column box p-4 is-three-quarters-mobile is-half-tablet is-3-desktop has-background-info-light">
+                <form class="travel-form is-flex is-flex-direction-column is-align-items-left">
+                    <div class="field">
+                        <label class="label mb-2" for="city">What city are you visiting?</label>
+                        <input class="city-text input" type="text" name="" id="city" autocomplete="off">
+                        <span class="city-error help is-danger"></span>
+                    </div>
+                    <div class="field">
+                        <label class="label mb-2" for="start-date">Start date:</label>
+                        <input class="input date start-date" type="date">
+                        <span class="start-error help is-danger"></span>
+                    </div>
+                    <div class="field">
+                        <label class=" label mb-2" for="end-date">End date:</label>
+                        <input class="date input end-date" type="date">
+                        <span class="end-error help is-danger"></span>
+                    </div>
+                    <button class="modal-button button is-info mt-2" type="submit">Let's Go!</button>
+                </form>
+            </div>
+          </div>
+
+           <!-- MODAL END-->
+
         <div class="columns">
             <header class="City column">
                 <h1>City Name</h1>
@@ -18,21 +48,21 @@
         <div class="columns">
             <div class="Events column">
                 <h3>Events</h3>
-                <img src="note-found.png" alt="event picture" class="">
+                <img src="" alt="event picture" class="">
                 <h4>Event Title</h4>
                 <button type="button">Previous</button>
                 <button type="button">Next</button>
             </div>
             <div class="Breweries column">
                 <h3>Breweries</h3>
-                <img src="note-found.png" alt="brewery picture" class="">
+                <img src="" alt="brewery picture" class="">
                 <h4>Name of Brewery</h4>
                 <button type="button">Previous</button>
                 <button type="button">Next</button>
             </div>
         </div>
     </div>
-      
+    <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
 
