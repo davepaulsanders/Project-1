@@ -24,6 +24,7 @@ function getEvents(lat, lon, start, end) {
             const eventImage = document.createElement("img");
             eventLink.setAttribute("href", e.url);
             eventImage.setAttribute("src", e.performers[0].images.huge);
+            eventLink.setAttribute("class", "event-block");
             eventItem.textContent = `${e.title}- ${date}`;
             eventLink.appendChild(eventItem);
             eventLink.appendChild(eventImage);

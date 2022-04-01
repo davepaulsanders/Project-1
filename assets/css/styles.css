@@ -1,5 +1,11 @@
 body {
   background-color: #0C0032;
+  height: 100%;
+}
+.notification {
+  max-height: 30rem;
+  overflow: auto;
+  padding: 1rem;
 }
 
 /* Modal Styling Start -- These are mostly to override Bulma */
@@ -57,17 +63,33 @@ button {
   color:whitesmoke;
   text-align: center; }
 
-  img {
-    width:100px;
-    height:100px;
-  }
-
   button {
     background-color: #3500d3;
     border: none;
     color: whitesmoke;
     border-radius: 4px;
   }
+
+  /* EVENT STYLING START */
+  .event-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: 2px solid gray;
+  }
+
+  .event-block:hover {
+    background-color: rgb(175, 175, 175);
+  }
+
+
+  .event-block img {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  /* EVENT STYLING END */
 
 
 
