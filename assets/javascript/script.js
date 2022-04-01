@@ -49,7 +49,7 @@ function getCoords(city, start, end) {
         response.json().then((data) => {
           modalContainer.classList.remove("is-active");
           console.log(data.name, data.coord.lat, data.coord.lon);
-          // functions to call here
+          getEvents(data.coord.lat, data.coord.lon, start, end);
         });
       }
     })
@@ -60,8 +60,9 @@ function getCoords(city, start, end) {
 
 function handleSubmit() {
   const city = cityInput.value.trim().toLowerCase();
-  let start = luxon.DateTime.fromFormat(startDate.value, "yyyy-dd-mm");
-  let end = luxon.DateTime.fromFormat(endDate.value, "yyyy-dd-mm");
+  let start = luxon.DateTime.fromFormat(startDate.value, "yyyy-MM-dd");
+  let end = luxon.DateTime.fromFormat(endDate.value, "yyyy-MM-dd");
+
   // if no text in city
   if (!city) {
     cityInput.classList.add("is-danger");
