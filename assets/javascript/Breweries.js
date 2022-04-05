@@ -8,7 +8,7 @@ const breweryName = document.querySelector(".brewery-name");
                 if (breweries.length === 0) {
                     const breweryWarning = document.createElement('h3');
                     breweryWarning.textContent = 'Sorry, no breweries in that city!';
-                    breweriesList.appendChild(breweryWarning);
+                    breweryList.appendChild(breweryWarning);
                     return;
                 }
                 breweries.forEach(brewery => {
