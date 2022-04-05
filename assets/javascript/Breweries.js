@@ -2,16 +2,15 @@ const breweryList = document.querySelector(".brewery-list");
 const breweryName = document.querySelector(".brewery-name");
 function getBrewery(name) {
   console.log(name);
-  name = name.toString();
   fetch(
-    'https://api.openbrewerydb.org/breweries?by_city=${name}')    
+    `https://api.openbrewerydb.org/breweries?by_name=${encodeURIComponent(name)}`)    
     
     .then((response) => {
       response.json().then((data) => {
         const brewery = data.brewery;
-        console.log(brewery);
+        console.log(data);
 
-        if (brewery.length === 0) {
+        if (data.length === 0) {
           const breweryWarning = document.createElement("h3");
           breweryWarning.textContent = "Sorry, no breweries in that city!";
           breweryList.appendChild(breweryWarning);
