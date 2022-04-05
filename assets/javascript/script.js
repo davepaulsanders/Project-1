@@ -50,6 +50,7 @@ function getCoords(city, start, end) {
           modalContainer.classList.remove("is-active");
           console.log(data.name, data.coord.lat, data.coord.lon);
           getEvents(data.coord.lat, data.coord.lon, start, end);
+          listBreweries(city);
         });
       }
     })
