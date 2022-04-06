@@ -64,7 +64,8 @@ button {
   text-align: center; }
 
 footer {
-  overflow: hidden;
+  position:absolute;
+  bottom: 0;
 }
 
   /* EVENT STYLING START */
