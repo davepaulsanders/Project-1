@@ -1,11 +1,13 @@
 body {
   background-color: #0C0032;
   height: 100vh!important;
+  overflow: hidden;
 }
 .notification {
   max-height: 30rem;
-  overflow: auto;
+  overflow: scroll;
   padding: 1rem;
+  z-index: 10;
 }
 
 /* Modal Styling Start -- These are mostly to override Bulma */
@@ -46,7 +48,6 @@ button {
 /* Modal Styling End */
 
 .City {
-  
   background-color: #282828;
   color:whitesmoke;
   text-align: center;
@@ -64,8 +65,9 @@ button {
   text-align: center; }
 
 footer {
-  position:absolute;
+  position: sticky;
   bottom: 0;
+  z-index: 1;
 }
 
   /* EVENT STYLING START */
