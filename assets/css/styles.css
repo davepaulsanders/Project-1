@@ -1,13 +1,23 @@
 body {
   background-color: #0C0032;
   height: 100vh!important;
-  overflow: hidden;
 }
+
+/* Styling for events and breweries */
+
 .notification {
   max-height: 30rem;
   overflow: scroll;
   padding: 1rem;
   z-index: 10;
+}
+
+/* Styling for footer */
+
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* Modal Styling Start -- These are mostly to override Bulma */
@@ -47,31 +57,9 @@ button {
 
 /* Modal Styling End */
 
-.City {
-  background-color: #282828;
-  color:whitesmoke;
-  text-align: center;
-   }
+  /* Results Styling Start */
 
-.Events {
-   color:whitesmoke;
-   background-color:#282828;
-   text-align: center;
-   }
-
-.Breweries { 
-  background-color: #282828;
-  color:whitesmoke;
-  text-align: center; }
-
-footer {
-  position: sticky;
-  bottom: 0;
-  z-index: 1;
-}
-
-  /* EVENT STYLING START */
-  .event-block {
+  .results {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,16 +68,16 @@ footer {
     border-bottom: 2px solid gray;
   }
 
-  .event-block:hover {
+  .results:hover {
     background-color: rgb(175, 175, 175);
   }
 
 
-  .event-block img {
+  .results img {
     width: 50%;
     margin-left: 1rem;
   }
-  /* EVENT STYLING END */
+  /* Results Styling End */
 
 
 
