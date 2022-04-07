@@ -1,5 +1,6 @@
 const eventList = document.querySelector(".event-list");
 const eventTitle = document.querySelector(".event-title");
+const eventContainer = document.querySelector(".notification");
 function getEvents(lat, lon, start, end) {
   fetch(
     `https://api.seatgeek.com/2/events/?lat=${lat}&lon=${lon}&per_page=5&range=15mi&datetime_utc.gt=${start}&datetime_utc.lte=${end}&client_id=MjYyNjc0MTB8MTY0ODIyNDk1OC43MDc4MTk3`
@@ -38,6 +39,7 @@ function getEvents(lat, lon, start, end) {
 
           // appending to ul in html
           eventList.appendChild(eventLink);
+          eventContainer.scrollTop = 0;
         });
       });
     })
