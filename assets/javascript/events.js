@@ -21,15 +21,22 @@ function getEvents(lat, lon, start, end) {
           let date = luxon.DateTime.fromISO(e.datetime_local).toLocaleString(
             luxon.DateTime.DATETIME_MED
           );
-          const eventItem = document.createElement("li");
+
+          // creating link to hold event
           const eventLink = document.createElement("a");
-          const eventImage = document.createElement("img");
           eventLink.setAttribute("href", e.url);
-          eventImage.setAttribute("src", e.performers[0].images.huge);
           eventLink.setAttribute("class", "results");
-          eventItem.textContent = `${e.title}- ${date}`;
-          eventLink.appendChild(eventItem);
-          eventLink.appendChild(eventImage);
+          
+          // setting inside of links
+          eventLink.innerHTML = `
+            <li>
+            <p class="my-3">${e.title}</p>
+            <p>${date}</p>
+            </li>
+            <img src=${e.performers[0].images.huge} alt='event image'/>
+            `;
+
+          // appending to ul in html
           eventList.appendChild(eventLink);
         });
       });
