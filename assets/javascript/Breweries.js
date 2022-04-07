@@ -31,5 +31,6 @@ async function listBreweries(city) {
 
 // Loading breweries in background for NY in case
 // modal is closed without making a selection
-
-listBreweries("New York");
+window.addEventListener("load", () => {
+  listBreweries("New York");
+});

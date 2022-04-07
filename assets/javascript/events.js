@@ -9,6 +9,7 @@ function getEvents(lat, lon, start, end) {
         const events = data.events;
 
         if (events.length === 0) {
+          eventList.innerHTML = "";
           const eventWarning = document.createElement("h3");
           eventWarning.textContent = "Sorry, no events in that city!";
           eventList.appendChild(eventWarning);
@@ -41,4 +42,8 @@ function getEvents(lat, lon, start, end) {
 // Adding events for NY in case modal is closed without making
 // a selection
 
-getEvents(40.7143, -74.006, "2022-04-06", "2022-04-07");
+window.addEventListener("load", () => {
+  const today = luxon.DateTime.now().toISO().split("T")[0];
+  const tomorrow = luxon.DateTime.now().plus({ days: 1 }).toISO().split("T")[0];
+  getEvents(40.7143, -74.006, today, tomorrow);
+});
