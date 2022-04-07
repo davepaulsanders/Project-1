@@ -1,6 +1,7 @@
 body {
   background-color: #0C0032;
   height: 100vh!important;
+  overflow: hidden;
 }
 
 /* Styling for events and breweries */
@@ -11,8 +12,15 @@ body {
   padding: 1rem;
   z-index: 10;
 }
-.city-activities {
-  padding-bottom: 4rem;
+
+a {
+  text-decoration: none!important;
+  padding: 1rem 0!important;
+}
+
+.event-name {
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.2rem;
 }
 /* Styling for footer */
 

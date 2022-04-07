@@ -26,12 +26,12 @@ function getEvents(lat, lon, start, end) {
           const eventLink = document.createElement("a");
           eventLink.setAttribute("href", e.url);
           eventLink.setAttribute("class", "results");
-          
+
           // setting inside of links
           eventLink.innerHTML = `
             <li>
-            <p class="my-3">${e.title}</p>
-            <p>${date}</p>
+            <p class=" event-name my-3 border-1">${e.title}</p>
+            <p class="is-size-7">${date}</p>
             </li>
             <img src=${e.performers[0].images.huge} alt='event image'/>
             `;
