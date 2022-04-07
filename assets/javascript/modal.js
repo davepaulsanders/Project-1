@@ -1,4 +1,5 @@
 const modalClose = document.querySelector(".modal-close");
+const modalOpen = document.querySelector(".modal-open");
 const form = document.querySelector(".travel-form");
 const modalContainer = document.querySelector(".modal");
 const modal = document.querySelector(".modal-content");
@@ -134,5 +135,9 @@ endDate.addEventListener("focus", () => {
 });
 modalClose.addEventListener("click", () => {
   modalContainer.classList.remove("is-active");
+});
+
+modalOpen.addEventListener("click", () => {
+  modalContainer.classList.add("is-active");
 });
 datePickerSetUp();

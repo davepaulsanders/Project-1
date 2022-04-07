@@ -1,6 +1,6 @@
 const breweryList = document.querySelector(".brewery-list");
 const breweryName = document.querySelector(".brewery-name");
-
+const breweryContainer = document.querySelector(".notification");
 async function listBreweries(city) {
   try {
     const response = await fetch(
@@ -23,6 +23,7 @@ async function listBreweries(city) {
       const breweryItem = document.createElement("li");
       breweryItem.appendChild(breweryLink);
       breweryList.appendChild(breweryItem);
+      breweryContainer.scrollTop = 0;
     });
   } catch (error) {
     console.error(error);
@@ -31,5 +32,6 @@ async function listBreweries(city) {
 
 // Loading breweries in background for NY in case
 // modal is closed without making a selection
-
-listBreweries("New York");
+window.addEventListener("load", () => {
+  listBreweries("New York");
+});

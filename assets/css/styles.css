@@ -1,6 +1,5 @@
 body {
   background-color: #0C0032;
-  height: 100vh!important;
 }
 
 /* Styling for events and breweries */
@@ -9,15 +8,23 @@ body {
   max-height: 30rem;
   overflow: scroll;
   padding: 1rem;
+  margin-bottom: 8rem;
   z-index: 10;
 }
-.city-activities {
-  padding-bottom: 4rem;
+
+a {
+  text-decoration: none!important;
+  padding: 1rem 0!important;
+}
+
+.event-name {
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.2rem;
 }
 /* Styling for footer */
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   z-index: 1;
 }
@@ -34,7 +41,10 @@ input {
 button {
   border-radius: 10px!important;
 }
-
+.modal-open {
+  text-align: center!important;
+  z-index: 2;
+}
 .shake {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
 }
