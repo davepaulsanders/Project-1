@@ -43,6 +43,7 @@ button {
 }
 .modal-open {
   text-align: center!important;
+  z-index: 2;
 }
 .shake {
   animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
