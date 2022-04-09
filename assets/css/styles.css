@@ -91,6 +91,23 @@ button {
   }
   /* Results Styling End */
 
-
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("https://upload.wikimedia.org/wikipedia/commons/9/98/Lower_Manhattan_from_Jersey_City_November_2014.jpg");
+    background-size: cover;
+    height: 30rem;
+    text-align: center;
+    background-position: center;
+    margin: -7%;
+    margin-bottom: 0%;
+    margin-top: 0px;
+    padding-top: 320px;
+   
+   
+  }
+  
+  .hero-section .hero-section-text {
+    color: #fefefe;
+  
+  }
 
   
