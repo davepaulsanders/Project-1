@@ -19,7 +19,7 @@ async function listBreweries(city) {
       const breweryLink = document.createElement("a");
       breweryLink.setAttribute("href", brewery.website_url);
       breweryLink.setAttribute("class", "results");
-      breweryLink.textContent = brewery.name;
+      breweryLink.textContent= brewery.name;
       const breweryItem = document.createElement("li");
       breweryItem.appendChild(breweryLink);
       breweryList.appendChild(breweryItem);
