@@ -1,14 +1,46 @@
+* {
+  --secondary: #89CFF0;
+}
+
 body {
   background-color: #0C0032;
 }
 
+/* Hero Styling Start */
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("https://upload.wikimedia.org/wikipedia/commons/9/98/Lower_Manhattan_from_Jersey_City_November_2014.jpg");
+  background-size: cover;
+  height: 20rem;
+  text-align: center;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+
+}
+
+/* Hero Styling End */
 
 /* Styling for events and breweries */
 
-h1 {
-  border: 5px solid #89CFF0;
+.new-city {
+  padding-bottom: 1.5rem;
+}
+
+.section button {
+  background-color: var(--secondary);
+  border: none;
+}
+.notification h1 {
+  border: 5px solid var(--secondary);
   border-radius: 15px;
-  background-color: #89CFF0;
+  background-color: var(--secondary);
 }
 .icon {
   display: block;
@@ -28,7 +60,7 @@ h1 {
 
 a {
   text-decoration: none!important;
-  padding: 1rem 0!important;
+  padding: 1rem 1rem!important;
 }
 
 .event-name {
@@ -95,31 +127,16 @@ button {
   }
 
   .results:hover {
-    background-color: rgb(175, 175, 175);
+    background-color: var(--secondary);
   }
 
 
   .results img {
-    width: 50%;
+    width: 53%;
     margin-left: 1rem;
+    border: 3px solid var(--secondary);
   }
   /* Results Styling End */
 
-  .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("https://upload.wikimedia.org/wikipedia/commons/9/98/Lower_Manhattan_from_Jersey_City_November_2014.jpg");
-    background-size: cover;
-    height: 20rem;
-    text-align: center;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-  }
   
-  .hero-section .hero-section-text {
-    color: #fefefe;
-  
-  }
-
   
