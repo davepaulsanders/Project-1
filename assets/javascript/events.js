@@ -54,5 +54,6 @@ function getEvents(lat, lon, start, end) {
 window.addEventListener("load", () => {
   const today = luxon.DateTime.now().toISO().split("T")[0];
   const tomorrow = luxon.DateTime.now().plus({ days: 1 }).toISO().split("T")[0];
+  cityName.textContent = "New York";
   getEvents(40.7143, -74.006, today, tomorrow);
 });

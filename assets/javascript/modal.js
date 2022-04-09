@@ -9,6 +9,7 @@ const endDate = document.querySelector(".end-date");
 const cityError = document.querySelector(".city-error");
 const startError = document.querySelector(".start-error");
 const endError = document.querySelector(".end-error");
+const cityName = document.querySelector(".city-name");
 const weatherKey = "c3092c2d4eb3d6f6f64456f5fc464ffa";
 // creating an array of all the datepickers in DOM
 const datePickers = Array.from(document.querySelectorAll(".date"));
@@ -51,6 +52,7 @@ function getCoords(city, start, end) {
         response.json().then((data) => {
           modalContainer.classList.remove("is-active");
           console.log(data.name, data.coord.lat, data.coord.lon);
+          cityName.textContent = data.name;
           getEvents(data.coord.lat, data.coord.lon, start, end);
           listBreweries(city);
         });
