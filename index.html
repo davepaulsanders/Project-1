@@ -28,7 +28,8 @@
                 <form class="travel-form is-flex is-flex-direction-column is-align-items-left">
                     <div class="field">
                         <label class="label mb-2" for="city">What city are you visiting?</label>
-                        <input class="city-text input" type="text" name="" id="city" autocomplete="off">
+                        <input class="city-text input" type="list" list="cities" name="cities" id="city" autocomplete="off">
+                        <datalist class="storage" id="cities"></datalist>
                         <span class="city-error help is-danger"></span>
                     </div>
                     <div class="field">
@@ -71,7 +72,7 @@
                 <div class="column">
                     <div class="notification">  
                         <h1 class="title brewery-name is-size-4 has-text-centered">Breweries</h1>
-                        <img src= "assets/images/Beer.png" class="icon" alt="Beer">
+                        <img src= "assets/images/brewery.jpeg" class="icon" alt="Beer">
                         <ul class="brewery-list">
                         </ul>
                     </div>
