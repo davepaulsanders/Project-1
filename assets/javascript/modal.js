@@ -122,7 +122,9 @@ form.addEventListener("submit", (event) => {
 cityInput.addEventListener("focus", () => {
   const cityStorage = JSON.parse(localStorage.getItem("cities"));
   const dataList = document.querySelector(".storage");
+  // emptying datalist if previously generated
   dataList.innerHTML = "";
+  // Adding local storage cities to datalist on focus
   cityStorage.forEach((city) => {
     const cityEl = document.createElement("option");
     cityEl.textContent = city;
@@ -151,9 +153,11 @@ modalClose.addEventListener("click", () => {
 });
 
 modalOpen.addEventListener("click", () => {
+  cityInput.value = "";
   modalContainer.classList.add("is-active");
 });
 
+// creating local storage for cities entered into app
 function cityNameDisplay(city) {
   const cityStorage = JSON.parse(localStorage.getItem("cities"));
   // create a storage array if it's empty
@@ -163,7 +167,7 @@ function cityNameDisplay(city) {
     localStorage.setItem("cities", JSON.stringify(cityArr));
   } else {
     if (cityStorage.includes(city)) {
-      // if the city is already in local storage, return
+      // if the city is already in local storage
       return;
     } else {
       cityStorage.push(city);
@@ -171,5 +175,6 @@ function cityNameDisplay(city) {
     }
   }
 }
+// Adding New York to local storage when the modal loads
 cityNameDisplay("New York");
 datePickerSetUp();
