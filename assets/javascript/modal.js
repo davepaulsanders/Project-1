@@ -10,6 +10,7 @@ const cityError = document.querySelector(".city-error");
 const startError = document.querySelector(".start-error");
 const endError = document.querySelector(".end-error");
 const cityName = document.querySelector(".city-name");
+
 const weatherKey = "c3092c2d4eb3d6f6f64456f5fc464ffa";
 // creating an array of all the datepickers in DOM
 const datePickers = Array.from(document.querySelectorAll(".date"));
@@ -53,6 +54,7 @@ function getCoords(city, start, end) {
           modalContainer.classList.remove("is-active");
           console.log(data.name, data.coord.lat, data.coord.lon);
           cityName.textContent = data.name;
+          cityNameDisplay(data.name);
           getEvents(data.coord.lat, data.coord.lon, start, end);
           listBreweries(city);
         });
@@ -118,6 +120,15 @@ form.addEventListener("submit", (event) => {
 
 // If elements have errors and are focused again the error is hidden
 cityInput.addEventListener("focus", () => {
+  const cityStorage = JSON.parse(localStorage.getItem("cities"));
+  const dataList = document.querySelector(".storage");
+  dataList.innerHTML = "";
+  cityStorage.forEach((city) => {
+    const cityEl = document.createElement("option");
+    cityEl.textContent = city;
+    dataList.appendChild(cityEl);
+  });
+
   if (cityInput.classList.contains("is-danger")) {
     cityError.textContent = "";
     cityInput.classList.remove("is-danger");
@@ -143,21 +154,22 @@ modalOpen.addEventListener("click", () => {
   modalContainer.classList.add("is-active");
 });
 
-//Local Storage -
-form.addEventListener("click", () => {
- 
-//Input History for the last city user submits
- 
-  let rememberCity=document.querySelector('.city-text').value 
-    console.log(rememberCity);
-    localStorage.setItem("name",rememberCity);
- 
-    cityNameDisplay();
-  });
- 
-  function cityNameDisplay () {
-    localStorage.getItem("name");
+function cityNameDisplay(city) {
+  const cityStorage = JSON.parse(localStorage.getItem("cities"));
+  // create a storage array if it's empty
+  if (!cityStorage) {
+    const cityArr = [];
+    cityArr.push(city);
+    localStorage.setItem("cities", JSON.stringify(cityArr));
+  } else {
+    if (cityStorage.includes(city)) {
+      // if the city is already in local storage, return
+      return;
+    } else {
+      cityStorage.push(city);
+      localStorage.setItem("cities", JSON.stringify(cityStorage));
+    }
   }
-  document.body.onload = cityNameDisplay;
- 
+}
+cityNameDisplay("New York");
 datePickerSetUp();

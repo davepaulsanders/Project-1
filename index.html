@@ -28,7 +28,8 @@
                 <form class="travel-form is-flex is-flex-direction-column is-align-items-left">
                     <div class="field">
                         <label class="label mb-2" for="city">What city are you visiting?</label>
-                        <input class="city-text input" type="text" name="" id="city" autocomplete="off">
+                        <input class="city-text input" type="list" list="cities" name="cities" id="city" autocomplete="off">
+                        <datalist class="storage" id="cities"></datalist>
                         <span class="city-error help is-danger"></span>
                     </div>
                     <div class="field">
