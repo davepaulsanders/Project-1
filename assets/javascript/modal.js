@@ -142,4 +142,22 @@ modalClose.addEventListener("click", () => {
 modalOpen.addEventListener("click", () => {
   modalContainer.classList.add("is-active");
 });
+
+//Local Storage -
+form.addEventListener("click", () => {
+ 
+//Input History for the last city user submits
+ 
+  let rememberCity=document.querySelector('.city-text').value 
+    console.log(rememberCity);
+    localStorage.setItem("name",rememberCity);
+ 
+    cityNameDisplay();
+  });
+ 
+  function cityNameDisplay () {
+    localStorage.getItem("name");
+  }
+  document.body.onload = cityNameDisplay;
+ 
 datePickerSetUp();
