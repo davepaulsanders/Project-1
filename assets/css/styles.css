@@ -73,8 +73,13 @@ footer {
   position: fixed;
   bottom: 0;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 10rem;
 }
-
+footer img {
+  width: 100%;
+}
 /* Modal Styling Start -- These are mostly to override Bulma */
 
 .modal-content {
