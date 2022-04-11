@@ -4,7 +4,7 @@ City Explorer allows users to choose a city and the dates they are planning to v
 
 ## Screenshots
 
-<img />
+<img src="assets/images/sitescreenshot.png" />
 
 ## Technologies
 
